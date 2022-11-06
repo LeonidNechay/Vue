@@ -1,0 +1,24 @@
+/* header server logo */
+
+.server_logo {
+  height: 80px;
+  flex: 0 1 285px;
+  display: flex;
+}
+.server_logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  margin: 10px;
+  transition-duration: 400ms;
+}
+.server_logo img:hover {
+  border-radius: 19px;
+}
+.header-text {
+  font-size: 40px;
+  margin: 20px 7px;
+}
+.header-pink {
+  color: rgb(255, 98, 255);
+}
