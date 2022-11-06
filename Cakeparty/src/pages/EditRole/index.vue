@@ -2,10 +2,7 @@
   <div>
     <main>
       <h1 class="main-h1">Edit Role</h1>
-      <div class="article">
-        <h2>Enter id</h2>
-        <input type="number" min="0" max="10" v-model="id" />
-      </div>
+      <input type="hidden" v-model="id" />
       <div class="article">
         <h2>Enter title</h2>
         <input type="text" v-model="title" />

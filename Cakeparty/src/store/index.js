@@ -177,8 +177,8 @@ const store = createStore({
     addNewRole(state, arr) {
       state.listData[arr[0]].description.optionsList.push({
         ...arr[1],
-      }),
-        console.log("add");
+      });
+      console.log("add");
     },
     editRole(state, arr) {
       state.listData[arr[0]].description.optionsList[arr[1].id] = arr[1];
