@@ -1,0 +1,26 @@
+.article input {
+  font-size: 18px;
+  color: white;
+  margin: 5px 0px 20px 10px;
+  background-color: rgb(93, 18, 133);
+  border: none;
+  border-left: 3px solid rgb(128, 25, 184);
+  border-radius: 3px;
+}
+.submit-button {
+  width: auto;
+  margin: 13px 5px 25px 5px;
+  padding: 12px 20px;
+  background-color: rgb(63, 33, 86);
+  box-shadow: rgba(63, 33, 86, 0.2) 2.5px 2.5px 0px 0px;
+  border-radius: 20px;
+  text-align: center;
+}
+.submit-button:hover {
+  transform: scale(1.02);
+}
+.submit-button:active {
+  margin: 15.5px 2.5px 22.5px 7.5px;
+  box-shadow: none;
+  background-color: rgb(64, 67, 73);
+}

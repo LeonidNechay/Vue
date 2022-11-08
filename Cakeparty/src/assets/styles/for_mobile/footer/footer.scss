@@ -1,0 +1,18 @@
+.footer-1 {
+  flex: 0 0 75%;
+}
+.footer {
+  margin-top: 10px;
+}
+.footer-button {
+  margin-top: 2px;
+  margin-bottom: 4px;
+  padding: 6px 8px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0px 0px;
+}
+.footer-button:active {
+  margin: 4px 2px 6px -2px;
+  box-shadow: none;
+  background-color: rgb(64, 67, 73);
+}

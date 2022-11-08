@@ -1,0 +1,10 @@
+@media screen and (min-width: 280px) and (max-width: 415px) {
+  .body {
+    font-size: 12px;
+    display: grid;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+}
