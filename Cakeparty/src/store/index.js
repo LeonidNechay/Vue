@@ -169,7 +169,11 @@ const store = createStore({
   getters: {
     getRolesList: (state) => state.listData,
     getRoleById: (state) => (id1, id2) => {
-      return state.listData[id1].description.optionsList[id2];
+      let a = state.listData[id1].description.optionsList.findIndex(
+        (item) => item.id == id2
+      );
+
+      return state.listData[id1].description.optionsList[a];
     },
   },
 
@@ -181,7 +185,10 @@ const store = createStore({
       console.log("add");
     },
     editRole(state, arr) {
-      state.listData[arr[0]].description.optionsList[arr[1].id] = arr[1];
+      var a = state.listData[arr[0]].description.optionsList.findIndex(
+        (item) => item.id == arr[1].id
+      );
+      state.listData[arr[0]].description.optionsList[a] = arr[1];
       console.log("edit");
     },
     deleteRole(state, arr) {

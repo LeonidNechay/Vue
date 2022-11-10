@@ -2,7 +2,9 @@
   <div class="body">
     <header>
       <div class="server_logo">
-        <a href="#"><img src="./assets/Avatar_Korra.gif" alt="server_gif" /></a>
+        <a :onclick="invalidLink"
+          ><img src="./assets/Avatar_Korra.gif" alt="server_gif"
+        /></a>
         <div class="header-text">
           <b class="header-pink">Cake</b><b>party</b>
         </div>
@@ -19,12 +21,12 @@
             <div class="menu-item-content">
               <ul>
                 <li>
-                  <a href="#">
+                  <a :onclick="invalidLink">
                     <b>Силка на сервер</b>
                   </a>
                 </li>
                 <li>
-                  <a href="#"><b>Підтримати нас</b></a>
+                  <a :onclick="invalidLink"><b>Підтримати нас</b></a>
                 </li>
               </ul>
             </div>
@@ -42,6 +44,11 @@
 export default {
   name: "App",
   components: {},
+  methods: {
+    invalidLink() {
+      alert("This link is invalid");
+    },
+  },
 };
 </script>
 
@@ -67,6 +74,7 @@ body {
 a {
   text-decoration: none;
   color: rgb(237, 237, 237);
+  cursor: pointer;
 }
 
 main {
