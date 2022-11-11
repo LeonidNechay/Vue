@@ -4,8 +4,8 @@
       <h1 class="main-h1">Правила</h1>
       <div class="article">
         <img
-          src="https://abrakadabra.fun/uploads/posts/2021-12/1638943594_1-abrakadabra-fun-p-banner-dlya-diskorda-anime-itachi-1.jpg"
-          alt="rules-img"
+          src="https://media.tenor.com/QEquHjOjaL8AAAAC/flower-purple.gif"
+          alt="rules-gif"
           class="rules-img"
         />
       </div>
