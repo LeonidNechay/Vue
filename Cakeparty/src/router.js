@@ -28,7 +28,7 @@ const routes = [
     component: AddRole,
   },
   {
-    path: "/add/:id?/:roleid?",
+    path: "/edit/:id?/:roleid?",
     name: "edit",
     component: EditRole,
   },

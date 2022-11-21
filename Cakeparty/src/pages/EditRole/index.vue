@@ -2,26 +2,74 @@
   <div>
     <main>
       <h1 class="main-h1">Edit Role</h1>
+      <div class="role">
+        <div class="actions">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+        <div class="role-text">
+          <strong :style="titleStyle(color, backgroundColor)">{{
+            this.title
+          }}</strong>
+        </div>
+        <div class="role-text">
+          {{ this.description }}
+        </div>
+      </div>
       <input type="hidden" v-model="id" />
       <div class="article">
-        <h2>Enter title</h2>
-        <input type="text" v-model="title" />
+        <div class="input-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="12"
+            required
+            class="input"
+            v-model="title"
+          />
+          <label for="name" class="input-label">Title</label>
+        </div>
       </div>
       <div class="article">
-        <h2>Enter description</h2>
-        <input type="text" v-model="description" />
+        <div class="input-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="50"
+            required
+            class="input"
+            v-model="description"
+          />
+          <label for="name" class="input-label">Description</label>
+        </div>
       </div>
       <div class="article">
-        <h2>Enter color(rgb)</h2>
-        <input type="text" placeholder="rgb(0, 0, 0)" v-model="color" />
+        <div class="input-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="input"
+            v-model="color"
+          />
+          <label for="name" class="input-label">Color(rgb)</label>
+        </div>
       </div>
       <div class="article">
-        <h2>Enter background color(rgba)</h2>
-        <input
-          type="text"
-          placeholder="rgba(0, 0, 0, 0.2)"
-          v-model="backgroundColor"
-        />
+        <div class="input-group">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="input"
+            v-model="backgroundColor"
+          />
+          <label for="name" class="input-label">Background color(rgba)</label>
+        </div>
       </div>
       <div class="submit-button" @click="editRole()">Submit</div>
       <main-masterpage>
@@ -81,6 +129,9 @@ export default {
     goToRoles() {
       this.$router.push({ path: "/roles" });
     },
+    titleStyle(color, backgroundColor) {
+      return { color: color, backgroundColor: backgroundColor };
+    },
   },
 
   mounted() {
@@ -98,4 +149,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/add-edit.scss";
+@import "@/assets/styles/roles";
 </style>
