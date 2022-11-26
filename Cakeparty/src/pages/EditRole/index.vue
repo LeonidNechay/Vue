@@ -1,23 +1,8 @@
 <template>
-  <div>
-    <main>
-      <h1 class="main-h1">Edit Role</h1>
-      <div class="role">
-        <div class="actions">
-          <i class="fa-solid fa-pen"></i>
-          <i class="fa-solid fa-trash"></i>
-        </div>
-        <div class="role-text">
-          <strong :style="titleStyle(color, backgroundColor)">{{
-            this.title
-          }}</strong>
-        </div>
-        <div class="role-text">
-          {{ this.description }}
-        </div>
-      </div>
-      <input type="hidden" v-model="id" />
+  <main>
+    <div class="flex">
       <div class="article">
+        <h2>Edit Role</h2>
         <div class="input-group">
           <input
             type="text"
@@ -31,52 +16,69 @@
           <label for="name" class="input-label">Title</label>
         </div>
       </div>
-      <div class="article">
-        <div class="input-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            maxlength="50"
-            required
-            class="input"
-            v-model="description"
-          />
-          <label for="name" class="input-label">Description</label>
+      <div class="role-container">
+        <div class="role">
+          <div class="actions">
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+          <div class="role-text">
+            <strong :style="titleStyle(color, backgroundColor)">{{
+              this.title
+            }}</strong>
+          </div>
+          <div class="role-text">
+            {{ this.description }}
+          </div>
         </div>
       </div>
-      <div class="article">
-        <div class="input-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="input"
-            v-model="color"
-          />
-          <label for="name" class="input-label">Color(rgb)</label>
-        </div>
+    </div>
+    <div class="article">
+      <div class="input-group">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          maxlength="50"
+          required
+          class="input"
+          v-model="description"
+        />
+        <label for="name" class="input-label">Description</label>
       </div>
-      <div class="article">
-        <div class="input-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="input"
-            v-model="backgroundColor"
-          />
-          <label for="name" class="input-label">Background color(rgba)</label>
-        </div>
+    </div>
+    <div class="article">
+      <div class="input-group">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="input"
+          v-model="color"
+        />
+        <label for="name" class="input-label">Color(rgb)</label>
       </div>
-      <div class="submit-button" @click="editRole()">Submit</div>
-      <main-masterpage>
-        <template v-slot:footer></template>
-      </main-masterpage>
-    </main>
-  </div>
+    </div>
+    <div class="article">
+      <div class="input-group">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="input"
+          v-model="backgroundColor"
+        />
+        <label for="name" class="input-label">Background color(rgba)</label>
+      </div>
+    </div>
+    <input type="hidden" v-model="id" />
+    <div class="submit-button" @click="editRole()">Submit</div>
+    <main-masterpage>
+      <template v-slot:footer></template>
+    </main-masterpage>
+  </main>
 </template>
 
 <script>
@@ -150,4 +152,21 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/styles/add-edit.scss";
 @import "@/assets/styles/roles";
+.role-container {
+  flex: 0 0 15%;
+}
+.flex .article {
+  flex: 0 0 82.4%;
+}
+.flex .article input {
+  margin: 30px 0px 26px 10px;
+}
+h2 {
+  margin-bottom: 0px;
+}
+.role {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
 </style>

@@ -34,9 +34,7 @@
         </div>
       </div>
     </header>
-    <main>
-      <router-view></router-view>
-    </main>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -59,7 +57,7 @@ export default {
 
 body {
   margin: 0px;
-  background-color: black;
+  background-color: rgb(43, 13, 66);
 }
 
 .body {
